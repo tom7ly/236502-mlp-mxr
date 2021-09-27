@@ -17,14 +17,14 @@ def crop_with_direction(data, left=0, right=0, bottom=0, top=0):
         cropped_data = tf.image.crop_to_bounding_box(data, top, left, 32-top, 32-left)
 
     padded_data = tf.image.pad_to_bounding_box(cropped_data, top, left, 32, 32)
-    plt.imshow(padded_data)
+    # plt.imshow(padded_data)
     return padded_data
 
 
-(x_train, y_train), (x_test, y_test) = keras.datasets.cifar100.load_data()
+# (x_train, y_train), (x_test, y_test) = keras.datasets.cifar100.load_data()
 
-img = x_train[0]
+# img = x_train[0]
 
-prcsed=crop_with_direction(img,1,0,0,0)
+# prcsed=crop_with_direction(img,1,0,0,0)
 
-print(1)
+# print(1)
